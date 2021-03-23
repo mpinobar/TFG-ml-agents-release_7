@@ -1,0 +1,23 @@
+{
+    "Platformer2D": {
+        "checkpoints": [
+            {
+                "steps": 180720,
+                "file_path": "results\\RelativePositionImitation\\Platformer2D\\Platformer2D-180720.nn",
+                "reward": null,
+                "creation_time": 1615663874.0549834
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 180720,
+            "file_path": "results\\RelativePositionImitation\\Platformer2D.nn",
+            "reward": null,
+            "creation_time": 1615663874.0549834
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

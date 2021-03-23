@@ -1,0 +1,41 @@
+{
+    "WormStatic": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\WormStatic\\WormStatic\\WormStatic-0.nn",
+                "reward": null,
+                "creation_time": 1602841543.8155437
+            },
+            {
+                "steps": 172000,
+                "file_path": "results\\WormStatic\\WormStatic\\WormStatic-172000.nn",
+                "reward": 0.32595881819725037,
+                "creation_time": 1602843835.4688346
+            },
+            {
+                "steps": 499000,
+                "file_path": "results\\WormStatic\\WormStatic\\WormStatic-499000.nn",
+                "reward": 7.351934687958823,
+                "creation_time": 1602845028.5226526
+            },
+            {
+                "steps": 542000,
+                "file_path": "results\\WormStatic\\WormStatic\\WormStatic-542000.nn",
+                "reward": 11.615104961395264,
+                "creation_time": 1602845183.8569715
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 542000,
+            "file_path": "results\\WormStatic\\WormStatic.nn",
+            "reward": 11.615104961395264,
+            "creation_time": 1602845183.8569715
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

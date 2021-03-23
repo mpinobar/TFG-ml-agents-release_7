@@ -1,0 +1,3 @@
+model_checkpoint_path: "WormStatic-542000.ckpt"
+all_model_checkpoint_paths: "WormStatic-499000.ckpt"
+all_model_checkpoint_paths: "WormStatic-542000.ckpt"

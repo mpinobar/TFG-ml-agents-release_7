@@ -1,0 +1,29 @@
+{
+    "FoodCollector": {
+        "checkpoints": [
+            {
+                "steps": 2057,
+                "file_path": "results\\Prueba1\\FoodCollector\\FoodCollector-2057.nn",
+                "reward": 0.0,
+                "creation_time": 1604319451.6170952
+            },
+            {
+                "steps": 4586,
+                "file_path": "results\\Prueba1\\FoodCollector\\FoodCollector-4586.nn",
+                "reward": 0.0,
+                "creation_time": 1604319584.2468941
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4586,
+            "file_path": "results\\Prueba1\\FoodCollector.nn",
+            "reward": 0.0,
+            "creation_time": 1604319584.2468941
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}
