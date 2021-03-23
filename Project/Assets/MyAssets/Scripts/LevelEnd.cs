@@ -10,5 +10,9 @@ public class LevelEnd : MonoBehaviour
         {
             collision.GetComponent<AgentControls>().EndWon();
         }
+        if (collision.GetComponent<AgentControlsCameraOneJump>())
+        {
+            collision.GetComponent<AgentControlsCameraOneJump>().EndWon();
+        }
     }
 }

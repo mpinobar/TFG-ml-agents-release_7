@@ -1,0 +1,23 @@
+{
+    "Platformer2DOneJumpCamera": {
+        "checkpoints": [
+            {
+                "steps": 342944,
+                "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera\\Platformer2DOneJumpCamera-342944.nn",
+                "reward": 5.6359129508491606,
+                "creation_time": 1616518888.1347222
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 342944,
+            "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera.nn",
+            "reward": 5.6359129508491606,
+            "creation_time": 1616518888.1347222
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.3.2"
+    }
+}
