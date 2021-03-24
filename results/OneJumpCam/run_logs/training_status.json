@@ -6,18 +6,30 @@
                 "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera\\Platformer2DOneJumpCamera-342944.nn",
                 "reward": 5.6359129508491606,
                 "creation_time": 1616518888.1347222
+            },
+            {
+                "steps": 499992,
+                "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera\\Platformer2DOneJumpCamera-499992.nn",
+                "reward": 8.60677951053367,
+                "creation_time": 1616586755.858883
+            },
+            {
+                "steps": 500056,
+                "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera\\Platformer2DOneJumpCamera-500056.nn",
+                "reward": 8.60677951053367,
+                "creation_time": 1616586760.489142
             }
         ],
         "final_checkpoint": {
-            "steps": 342944,
+            "steps": 500056,
             "file_path": "results\\OneJumpCam\\Platformer2DOneJumpCamera.nn",
-            "reward": 5.6359129508491606,
-            "creation_time": 1616518888.1347222
+            "reward": 8.60677951053367,
+            "creation_time": 1616586760.489142
         }
     },
     "metadata": {
         "stats_format_version": "0.1.0",
         "mlagents_version": "0.20.0",
-        "tensorflow_version": "2.3.2"
+        "tensorflow_version": "2.2.0-rc1"
     }
 }
