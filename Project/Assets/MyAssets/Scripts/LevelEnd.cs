@@ -10,9 +10,9 @@ public class LevelEnd : MonoBehaviour
         {
             collision.GetComponent<AgentControls>().EndWon();
         }
-        if (collision.GetComponent<AgentControlsCameraOneJump>())
+        if (collision.GetComponent<AgentControlsParent>())
         {
-            collision.GetComponent<AgentControlsCameraOneJump>().EndWon();
+            collision.GetComponent<AgentControlsParent>().EndWon();
         }
     }
 }

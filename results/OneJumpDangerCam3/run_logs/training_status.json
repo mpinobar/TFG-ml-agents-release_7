@@ -1,0 +1,29 @@
+{
+    "OneJumpCamDanger": {
+        "checkpoints": [
+            {
+                "steps": 499968,
+                "file_path": "results\\OneJumpDangerCam3\\OneJumpCamDanger\\OneJumpCamDanger-499968.nn",
+                "reward": null,
+                "creation_time": 1616713309.7938006
+            },
+            {
+                "steps": 500992,
+                "file_path": "results\\OneJumpDangerCam3\\OneJumpCamDanger\\OneJumpCamDanger-500992.nn",
+                "reward": null,
+                "creation_time": 1616713314.6209648
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500992,
+            "file_path": "results\\OneJumpDangerCam3\\OneJumpCamDanger.nn",
+            "reward": null,
+            "creation_time": 1616713314.6209648
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

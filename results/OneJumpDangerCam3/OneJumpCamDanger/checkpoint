@@ -1,0 +1,3 @@
+model_checkpoint_path: "OneJumpCamDanger-500992.ckpt"
+all_model_checkpoint_paths: "OneJumpCamDanger-499968.ckpt"
+all_model_checkpoint_paths: "OneJumpCamDanger-500992.ckpt"
