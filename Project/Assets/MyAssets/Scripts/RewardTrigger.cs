@@ -9,7 +9,7 @@ public class RewardTrigger : MonoBehaviour
         AgentControlsParent agent = collision.GetComponent<AgentControlsParent>();
         if (agent && agent.canGetReward)
         {
-            agent.AddReward(1f);
+            agent.AddReward(.1f);
             agent.canGetReward = false;
         }
     }

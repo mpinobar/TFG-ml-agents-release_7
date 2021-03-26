@@ -120,7 +120,7 @@ public class AgentControls : Agent
     {
         //base.OnActionReceived(vectorAction);
 
-        if (vectorAction[1] == 1)
+        if (vectorAction.Length > 1 && vectorAction[1] == 1)
         {
             Jump();
         }

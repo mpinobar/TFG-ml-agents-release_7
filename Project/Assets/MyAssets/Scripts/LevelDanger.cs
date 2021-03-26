@@ -9,7 +9,7 @@ public class LevelDanger : MonoBehaviour
     {
         if (collision.GetComponent<AgentControlsParent>())
         {
-            collision.GetComponent<AgentControlsParent>().DangerContact(-0.1f);
+            collision.GetComponent<AgentControlsParent>().DangerContact(-1f);
         }
     }
 

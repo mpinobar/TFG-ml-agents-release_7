@@ -1,0 +1,2 @@
+model_checkpoint_path: "OneJumpRaycast-58008.ckpt"
+all_model_checkpoint_paths: "OneJumpRaycast-58008.ckpt"

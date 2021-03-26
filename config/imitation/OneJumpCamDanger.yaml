@@ -18,6 +18,9 @@ behaviors:
       extrinsic:
         strength: 1.0
         gamma: 0.99
+    gail:
+        strength: 0.5        
+        demo_path: Project/Demos/OneJumpDanger.demo
     behavioral_cloning:
-      demo_path: Project/Demos/OneJumpDanger.demo
-      strength: 0.8      
+        demo_path: Project/Demos/OneJumpDanger.demo
+        strength: 0.8      

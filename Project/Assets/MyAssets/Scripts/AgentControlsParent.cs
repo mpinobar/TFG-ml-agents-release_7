@@ -23,6 +23,7 @@ public class AgentControlsParent : Agent
         {
             m_rgb.gravityScale = initialGravity * 2;
         }
+        Move(1);
     }
 
     public virtual void Move(float input)
@@ -54,21 +55,24 @@ public class AgentControlsParent : Agent
     public override void Heuristic(float[] actionsOut)
     {
         base.Heuristic(actionsOut);
-        horizontalInput = Input.GetAxis("Horizontal");
-        actionsOut[0] = horizontalInput;
-        actionsOut[1] = 0;
-        if (Input.GetKey(KeyCode.Space))
-        {
-            actionsOut[1] = 1;
-        }
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //actionsOut[0] = horizontalInput;
+        //actionsOut[1] = 0;
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    actionsOut[1] = 1;
+        //}
+
+
+        
     }
     public bool canGetReward;
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(isJumpReady);
-        Vector3 directionToEnd = (endReward.transform.position - transform.position).normalized;
-        sensor.AddObservation(directionToEnd.x);
-        sensor.AddObservation(directionToEnd.y);
+        //sensor.AddObservation(isJumpReady);
+        //Vector3 directionToEnd = (endReward.transform.position - transform.position)/*.normalized*/;
+        //sensor.AddObservation(directionToEnd.x);
+        //sensor.AddObservation(directionToEnd.y);
         //float distanceRaycast =  1-(Mathf.Min(Physics2D.Raycast(transform.position,Vector3.right).distance,5))*0.2f;
         //sensor.AddObservation(distanceRaycast);
         //sensor.AddObservation(Vector2.Distance(transform.position, endReward.transform.position) / maxDistance);
@@ -114,11 +118,18 @@ public class AgentControlsParent : Agent
     {
         //base.OnActionReceived(vectorAction);
 
-        if (vectorAction[1] == 1)
+        //if (vectorAction[1] == 1)
+        //{
+        //    Jump();
+        //}
+        //Move(vectorAction[0]);
+        if (vectorAction[0] > 0.5f)
         {
             Jump();
         }
-        Move(vectorAction[0]);
-        AddReward(-(Vector2.Distance(transform.position, endReward.transform.position) / maxDistance) / MaxStep);
+        
+        //AddReward(((maxDistance - Vector2.Distance(transform.position, endReward.transform.position)) / maxDistance) / MaxStep);
+
+        //SetReward()
     }
 }

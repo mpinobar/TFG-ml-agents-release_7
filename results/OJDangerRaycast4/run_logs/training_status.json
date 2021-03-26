@@ -1,0 +1,23 @@
+{
+    "OneJumpRaycast": {
+        "checkpoints": [
+            {
+                "steps": 125048,
+                "file_path": "results\\OJDangerRaycast4\\OneJumpRaycast\\OneJumpRaycast-125048.nn",
+                "reward": null,
+                "creation_time": 1616749810.4797723
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 125048,
+            "file_path": "results\\OJDangerRaycast4\\OneJumpRaycast.nn",
+            "reward": null,
+            "creation_time": 1616749810.4797723
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

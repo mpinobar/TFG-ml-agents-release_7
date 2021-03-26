@@ -1,0 +1,2 @@
+model_checkpoint_path: "OneJumpDangerRT-362624.ckpt"
+all_model_checkpoint_paths: "OneJumpDangerRT-362624.ckpt"

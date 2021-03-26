@@ -1,0 +1,23 @@
+{
+    "OneJumpDangerRT": {
+        "checkpoints": [
+            {
+                "steps": 8840,
+                "file_path": "results\\OJDangerRT\\OneJumpDangerRT\\OneJumpDangerRT-8840.nn",
+                "reward": null,
+                "creation_time": 1616763742.9109576
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8840,
+            "file_path": "results\\OJDangerRT\\OneJumpDangerRT.nn",
+            "reward": null,
+            "creation_time": 1616763742.9109576
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "OneJumpRaycast": {
+        "checkpoints": [
+            {
+                "steps": 499984,
+                "file_path": "results\\OJDangerRaycast5\\OneJumpRaycast\\OneJumpRaycast-499984.nn",
+                "reward": null,
+                "creation_time": 1616750966.0560727
+            },
+            {
+                "steps": 999984,
+                "file_path": "results\\OJDangerRaycast5\\OneJumpRaycast\\OneJumpRaycast-999984.nn",
+                "reward": null,
+                "creation_time": 1616751874.678947
+            },
+            {
+                "steps": 1288208,
+                "file_path": "results\\OJDangerRaycast5\\OneJumpRaycast\\OneJumpRaycast-1288208.nn",
+                "reward": null,
+                "creation_time": 1616752369.3560169
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1288208,
+            "file_path": "results\\OJDangerRaycast5\\OneJumpRaycast.nn",
+            "reward": null,
+            "creation_time": 1616752369.3560169
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}
