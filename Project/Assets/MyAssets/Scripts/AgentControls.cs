@@ -7,7 +7,7 @@ using UnityEngine;
 public class AgentControls : Agent
 {
     [SerializeField] float speed = 5f;
-    [SerializeField] float jumpForce = 8f;
+    [SerializeField] float jumpForce = 15f;
     [SerializeField] Transform initialPosition /*= FindObjectOfType<InitialPosition>().transform*/;
     bool isJumpReady;
     //[SerializeField] float timeToReset = 20f;
@@ -125,6 +125,6 @@ public class AgentControls : Agent
             Jump();
         }
         Move(vectorAction[0]);
-        AddReward(-(Vector2.Distance(transform.position, endReward.transform.position) / maxDistance) / MaxStep);
+        //AddReward(-(Vector2.Distance(transform.position, endReward.transform.position) / maxDistance) / MaxStep);
     }
 }

@@ -1,0 +1,35 @@
+{
+    "RelativePosOneDanger": {
+        "checkpoints": [
+            {
+                "steps": 71936,
+                "file_path": "results\\NoPositiveRewardRelPos\\RelativePosOneDanger\\RelativePosOneDanger-71936.nn",
+                "reward": null,
+                "creation_time": 1617094293.988875
+            },
+            {
+                "steps": 499958,
+                "file_path": "results\\NoPositiveRewardRelPos\\RelativePosOneDanger\\RelativePosOneDanger-499958.nn",
+                "reward": null,
+                "creation_time": 1617095744.2292821
+            },
+            {
+                "steps": 500022,
+                "file_path": "results\\NoPositiveRewardRelPos\\RelativePosOneDanger\\RelativePosOneDanger-500022.nn",
+                "reward": null,
+                "creation_time": 1617095747.5871863
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500022,
+            "file_path": "results\\NoPositiveRewardRelPos\\RelativePosOneDanger.nn",
+            "reward": null,
+            "creation_time": 1617095747.5871863
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

@@ -100,7 +100,11 @@ public class AgentControlsParent : Agent
         AddReward(1);
         Reset();
     }
-
+    private void FixedUpdate()
+    {
+        if (isJumpReady)
+            RequestDecision();
+    }
     //bool restar;
 
     public virtual void Reset()
@@ -116,6 +120,7 @@ public class AgentControlsParent : Agent
 
     public override void OnActionReceived(float[] vectorAction)
     {
+
         //base.OnActionReceived(vectorAction);
 
         //if (vectorAction[1] == 1)
@@ -123,7 +128,8 @@ public class AgentControlsParent : Agent
         //    Jump();
         //}
         //Move(vectorAction[0]);
-        if (vectorAction[0] > 0.5f)
+        //Debug.LogError(vectorAction[0]);
+        if (Mathf.FloorToInt(vectorAction[0]) == 1)
         {
             Jump();
         }

@@ -18,6 +18,10 @@ public class AgentControlsCameraOneJumpDanger : AgentControlsParent
             actionsOut[0] = 1;
         }
     }
+    public override void EndWon()
+    {
+        Reset();
+    }
 
     public override void CollectObservations(VectorSensor sensor)
     {
