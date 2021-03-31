@@ -4,24 +4,13 @@ using UnityEngine;
 
 public class LevelDanger : MonoBehaviour
 {
-    [SerializeField] float spawnRange = 5f;
+    [SerializeField] float punishment = -0.2f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<AgentControlsParent>())
         {
-            collision.GetComponent<AgentControlsParent>().DangerContact(-1f);
+            collision.GetComponent<AgentControlsParent>().DangerContact(punishment);
         }
     }
-
-    Vector3 initalPos;
-    private void Start()
-    {
-        initalPos = transform.position;
-
-    }
-
-    public void Reposition()
-    {
-        transform.position = initalPos + Vector3.right * (Random.value * 2f - 1) * spawnRange;
-    }
+    
 }

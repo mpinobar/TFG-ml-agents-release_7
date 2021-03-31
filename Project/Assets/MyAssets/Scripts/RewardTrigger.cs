@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class RewardTrigger : MonoBehaviour
 {
+    public bool canReward;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         AgentControlsParent agent = collision.GetComponent<AgentControlsParent>();
-        if (agent && agent.canGetReward)
+        if (agent && canReward)
         {
             agent.AddReward(.1f);
-            agent.canGetReward = false;
+            canReward = false;
+            enabled = false;
         }
     }
 }

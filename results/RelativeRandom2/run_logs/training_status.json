@@ -1,0 +1,29 @@
+{
+    "RelativePosRandom": {
+        "checkpoints": [
+            {
+                "steps": 499984,
+                "file_path": "results\\RelativeRandom2\\RelativePosRandom\\RelativePosRandom-499984.nn",
+                "reward": -0.5555555555555556,
+                "creation_time": 1617217810.6279376
+            },
+            {
+                "steps": 662720,
+                "file_path": "results\\RelativeRandom2\\RelativePosRandom\\RelativePosRandom-662720.nn",
+                "reward": null,
+                "creation_time": 1617218093.100826
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 662720,
+            "file_path": "results\\RelativeRandom2\\RelativePosRandom.nn",
+            "reward": null,
+            "creation_time": 1617218093.100826
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

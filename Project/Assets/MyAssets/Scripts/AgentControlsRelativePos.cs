@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using Unity.MLAgents.Policies;
 
 public class AgentControlsRelativePos : AgentControlsParent
 {
-    [SerializeField] LevelDanger danger;
+    PositionRandomizer [] dangers;
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        Vector2 directionToDanger = danger.transform.position - transform.position;
-        sensor.AddObservation(directionToDanger.x);
-        sensor.AddObservation(directionToDanger.y);
+        for (int i = 0; i < dangers.Length; i++)
+        {
+            Vector2 directionToDanger = dangers[i].transform.position - transform.position;
+            sensor.AddObservation(directionToDanger.x);
+            sensor.AddObservation(directionToDanger.y);
+        }
         sensor.AddObservation(Physics2D.Raycast(transform.position, Vector2.right).distance);
-
+        sensor.AddObservation(Physics2D.Raycast(transform.position, Vector2.right + Vector2.up).distance);
     }
 
     public override void Heuristic(float[] actionsOut)
@@ -31,6 +35,18 @@ public class AgentControlsRelativePos : AgentControlsParent
     public override void Reset()
     {
         base.Reset();
-        danger.Reposition();
+        RepositionDangers();
+    }
+    private void RepositionDangers()
+    {
+        for (int i = 0; i < dangers.Length; i++)
+        {
+            dangers[i].Reposition();
+        }
+    }
+    public override void Initialize()
+    {
+        base.Initialize();
+        dangers = transform.parent.GetComponentsInChildren<PositionRandomizer>();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AgentControlsRaycastOneJump : AgentControlsParent
 {
-    [SerializeField] LevelDanger danger;
+    [SerializeField] PositionRandomizer danger;
     public override void Reset()
     {
         base.Reset();

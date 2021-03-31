@@ -2,7 +2,7 @@ using Unity.MLAgents.Sensors;
 using UnityEngine;
 public class AgentControlsCameraOneJumpDanger : AgentControlsParent
 {
-    [SerializeField] LevelDanger danger;
+    [SerializeField] PositionRandomizer danger;
 
     public override void Reset()
     {

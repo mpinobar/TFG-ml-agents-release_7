@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgentControlsParent : Agent
 {
     [SerializeField] public float speed = 5f;
-    [SerializeField] public float jumpForce = 8f;
+    [SerializeField] public float jumpForce = 15f;
     [SerializeField] public Transform initialPosition /*= FindObjectOfType<InitialPosition>().transform*/;
     public bool isJumpReady;
     //[SerializeField] float timeToReset = 20f;
@@ -23,7 +23,7 @@ public class AgentControlsParent : Agent
         {
             m_rgb.gravityScale = initialGravity * 2;
         }
-        Move(1);
+        //Move(1);
     }
 
     public virtual void Move(float input)
@@ -50,6 +50,7 @@ public class AgentControlsParent : Agent
         base.Initialize();
         m_rgb = GetComponent<Rigidbody2D>();
         initialGravity = m_rgb.gravityScale;
+        Reset();
     }
 
     public override void Heuristic(float[] actionsOut)
@@ -67,20 +68,12 @@ public class AgentControlsParent : Agent
         
     }
     public bool canGetReward;
-    public override void CollectObservations(VectorSensor sensor)
-    {
-        //sensor.AddObservation(isJumpReady);
-        //Vector3 directionToEnd = (endReward.transform.position - transform.position)/*.normalized*/;
-        //sensor.AddObservation(directionToEnd.x);
-        //sensor.AddObservation(directionToEnd.y);
-        //float distanceRaycast =  1-(Mathf.Min(Physics2D.Raycast(transform.position,Vector3.right).distance,5))*0.2f;
-        //sensor.AddObservation(distanceRaycast);
-        //sensor.AddObservation(Vector2.Distance(transform.position, endReward.transform.position) / maxDistance);
-    }
+
     public virtual void DangerContact(float negativeReward)
     {
         AddReward(negativeReward);
         Reset();
+        EndEpisode();
     }
     public override void OnEpisodeBegin()
     {
