@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 using Unity.MLAgents.Policies;
+using System;
 
 public class AgentControlsRelativePos : AgentControlsParent
 {
     PositionRandomizer [] dangers;
-
+    
     public override void CollectObservations(VectorSensor sensor)
     {
+        sensor.AddObservation(isJumpReady);
         for (int i = 0; i < dangers.Length; i++)
         {
             Vector2 directionToDanger = dangers[i].transform.position - transform.position;
@@ -19,7 +21,12 @@ public class AgentControlsRelativePos : AgentControlsParent
         sensor.AddObservation(Physics2D.Raycast(transform.position, Vector2.right).distance);
         sensor.AddObservation(Physics2D.Raycast(transform.position, Vector2.right + Vector2.up).distance);
     }
-
+    private void FixedUpdate()
+    {
+        Move(1);
+        if (isJumpReady)
+            RequestDecision();
+    }
     public override void Heuristic(float[] actionsOut)
     {
 
@@ -34,11 +41,21 @@ public class AgentControlsRelativePos : AgentControlsParent
     }
     public override void Reset()
     {
-        base.Reset();
+        base.Reset();       
         RepositionDangers();
     }
     private void RepositionDangers()
     {
+        if (dangers == null)
+        {
+            LevelDanger[] temp = transform.parent.GetComponentsInChildren<LevelDanger>();
+            dangers = new PositionRandomizer[temp.Length];
+            for (int i = 0; i < temp.Length; i++)
+            {
+                dangers[i] = temp[i].GetComponent<PositionRandomizer>();
+            }
+            dangers = transform.parent.GetComponentsInChildren<PositionRandomizer>();
+        }
         for (int i = 0; i < dangers.Length; i++)
         {
             dangers[i].Reposition();
@@ -47,6 +64,23 @@ public class AgentControlsRelativePos : AgentControlsParent
     public override void Initialize()
     {
         base.Initialize();
-        dangers = transform.parent.GetComponentsInChildren<PositionRandomizer>();
+        LevelDanger[] temp = transform.parent.GetComponentsInChildren<LevelDanger>();
+        dangers = new PositionRandomizer[temp.Length];
+        for (int i = 0; i < temp.Length; i++)
+        {
+            dangers[i] = temp[i].GetComponent<PositionRandomizer>();
+        }
+
+        RepositionDangers();
+    }
+
+    public override void OnActionReceived(float[] vectorAction)
+    {
+        //base.OnActionReceived(vectorAction);
+        if (Mathf.FloorToInt(vectorAction[0]) == 1)
+        {
+            Jump();
+        }
+
     }
 }

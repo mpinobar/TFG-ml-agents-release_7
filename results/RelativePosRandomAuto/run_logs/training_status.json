@@ -1,0 +1,23 @@
+{
+    "RelativePosRandomAuto": {
+        "checkpoints": [
+            {
+                "steps": 232026,
+                "file_path": "results\\RelativePosRandomAuto\\RelativePosRandomAuto\\RelativePosRandomAuto-232026.nn",
+                "reward": -0.19689441287184353,
+                "creation_time": 1617296086.8631563
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 232026,
+            "file_path": "results\\RelativePosRandomAuto\\RelativePosRandomAuto.nn",
+            "reward": -0.19689441287184353,
+            "creation_time": 1617296086.8631563
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

@@ -9,7 +9,20 @@ public class PositionRandomizer : MonoBehaviour
     Vector3 downPosition;
     Vector3 initalPos;
 
+    [SerializeField] AgentControlsParent agent;
     [SerializeField] RewardTrigger rewardTrigger;
+
+    private void OnEnable()
+    {
+        if (agent)
+            agent.OnReset += Reposition;
+    }
+
+    private void OnDisable()
+    {
+        if (agent)
+            agent.OnReset -= Reposition;
+    }
     private void Start()
     {
         initalPos = transform.localPosition;

@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1edf934ff48f94aae30b07fb567b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punishment: -0.2
 --- !u!114 &1891930165025980721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRange: 1
   variableHeight: 1
+  agent: {fileID: 0}
   rewardTrigger: {fileID: 1891930166757881687}
 --- !u!1 &1891930165231097580
 GameObject:
@@ -281,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891930166757881681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.95, z: 0}
+  m_LocalPosition: {x: 0.35, y: -0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1891930165025980723}
@@ -346,4 +348,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6094c5941c10b964c864f6bae8d504ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 0}
   canReward: 0

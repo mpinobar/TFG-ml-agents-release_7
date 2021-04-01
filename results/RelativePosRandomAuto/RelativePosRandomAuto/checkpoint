@@ -1,0 +1,2 @@
+model_checkpoint_path: "RelativePosRandomAuto-232026.ckpt"
+all_model_checkpoint_paths: "RelativePosRandomAuto-232026.ckpt"

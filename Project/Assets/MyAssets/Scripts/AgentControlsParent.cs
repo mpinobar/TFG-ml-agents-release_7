@@ -1,6 +1,7 @@
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using System;
 
 public class AgentControlsParent : Agent
 {
@@ -14,7 +15,7 @@ public class AgentControlsParent : Agent
     public float horizontalInput;
     public float initialGravity;
 
-
+    public Action OnReset;
     // Update is called once per frame
     public virtual void Update()
     {
@@ -53,20 +54,6 @@ public class AgentControlsParent : Agent
         Reset();
     }
 
-    public override void Heuristic(float[] actionsOut)
-    {
-        base.Heuristic(actionsOut);
-        //horizontalInput = Input.GetAxis("Horizontal");
-        //actionsOut[0] = horizontalInput;
-        //actionsOut[1] = 0;
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    actionsOut[1] = 1;
-        //}
-
-
-        
-    }
     public bool canGetReward;
 
     public virtual void DangerContact(float negativeReward)
@@ -77,13 +64,8 @@ public class AgentControlsParent : Agent
     }
     public override void OnEpisodeBegin()
     {
-        //base.OnEpisodeBegin();
-        //if (restar)
-        //{
-        //    AddReward(-1);
-        //}
         Reset();
-        //Invoke(nameof(EndLost), timeToReset);
+
     }
 
     public float maxDistance;
@@ -92,6 +74,7 @@ public class AgentControlsParent : Agent
     {
         AddReward(1);
         Reset();
+        EndEpisode();
     }
     private void FixedUpdate()
     {
@@ -103,6 +86,7 @@ public class AgentControlsParent : Agent
     public virtual void Reset()
     {
         //restar = true;
+        OnReset?.Invoke();
         maxDistance = Vector2.Distance(initialPosition.position, endReward.transform.position);
         canGetReward = true;
         //Debug.Log(GetCumulativeReward());
@@ -120,7 +104,7 @@ public class AgentControlsParent : Agent
         //{
         //    Jump();
         //}
-        //Move(vectorAction[0]);
+        //Move(vectorAction[1]);
         //Debug.LogError(vectorAction[0]);
         if (Mathf.FloorToInt(vectorAction[0]) == 1)
         {

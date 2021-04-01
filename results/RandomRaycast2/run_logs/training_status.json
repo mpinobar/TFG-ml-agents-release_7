@@ -1,0 +1,23 @@
+{
+    "RaycastRandom": {
+        "checkpoints": [
+            {
+                "steps": 302666,
+                "file_path": "results\\RandomRaycast2\\RaycastRandom\\RaycastRandom-302666.nn",
+                "reward": null,
+                "creation_time": 1617300272.010009
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 302666,
+            "file_path": "results\\RandomRaycast2\\RaycastRandom.nn",
+            "reward": null,
+            "creation_time": 1617300272.010009
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

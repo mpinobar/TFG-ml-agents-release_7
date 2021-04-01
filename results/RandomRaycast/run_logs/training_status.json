@@ -1,0 +1,41 @@
+{
+    "RelativePosRandom": {
+        "checkpoints": [
+            {
+                "steps": 499946,
+                "file_path": "results\\RandomRaycast\\RelativePosRandom\\RelativePosRandom-499946.nn",
+                "reward": -0.10000000273187955,
+                "creation_time": 1617299145.64216
+            },
+            {
+                "steps": 500010,
+                "file_path": "results\\RandomRaycast\\RelativePosRandom\\RelativePosRandom-500010.nn",
+                "reward": -0.10000000273187955,
+                "creation_time": 1617299149.5122578
+            },
+            {
+                "steps": 500010,
+                "file_path": "results\\RandomRaycast\\RelativePosRandom\\RelativePosRandom-500010.nn",
+                "reward": null,
+                "creation_time": 1617299321.67224
+            },
+            {
+                "steps": 500010,
+                "file_path": "results\\RandomRaycast\\RelativePosRandom\\RelativePosRandom-500010.nn",
+                "reward": null,
+                "creation_time": 1617299484.2395744
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500010,
+            "file_path": "results\\RandomRaycast\\RelativePosRandom.nn",
+            "reward": null,
+            "creation_time": 1617299484.2395744
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

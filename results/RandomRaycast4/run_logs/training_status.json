@@ -1,0 +1,29 @@
+{
+    "RaycastRandom": {
+        "checkpoints": [
+            {
+                "steps": 499958,
+                "file_path": "results\\RandomRaycast4\\RaycastRandom\\RaycastRandom-499958.nn",
+                "reward": null,
+                "creation_time": 1617303999.9721565
+            },
+            {
+                "steps": 625012,
+                "file_path": "results\\RandomRaycast4\\RaycastRandom\\RaycastRandom-625012.nn",
+                "reward": 1.4000000059604645,
+                "creation_time": 1617304194.2003787
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 625012,
+            "file_path": "results\\RandomRaycast4\\RaycastRandom.nn",
+            "reward": 1.4000000059604645,
+            "creation_time": 1617304194.2003787
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}
