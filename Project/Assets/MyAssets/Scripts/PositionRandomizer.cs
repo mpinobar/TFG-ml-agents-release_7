@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class PositionRandomizer : MonoBehaviour
 {
     [SerializeField] float spawnRange = 1f;
 
-    [SerializeField] bool variableHeight;
+    [SerializeField] bool variablePosition;
+    Vector3 [] possiblePositions;
     Vector3 upPosition;
     Vector3 downPosition;
     Vector3 initalPos;
@@ -25,27 +26,31 @@ public class PositionRandomizer : MonoBehaviour
     }
     private void Start()
     {
+        List<Vector3> positionsList = new List<Vector3>();
+        for (int i = 0; i < transform.parent.childCount - 1; i++)
+        {
+            positionsList.Add(transform.parent.GetChild(i).localPosition);
+        }
+        possiblePositions = positionsList.ToArray();
         initalPos = transform.localPosition;
     }
 
     public void Reposition()
     {
         transform.localPosition = initalPos + Vector3.right * (Random.value * 2f - 1) * spawnRange;
-        if (variableHeight)
-            RandomizeHeight();
+        if (variablePosition)
+            RandomizePosition();
         if (rewardTrigger)
             rewardTrigger.canReward = true;
     }
 
-    private void RandomizeHeight()
+    private void RandomizePosition()
     {
-        float rand = Random.value;
-        if (rand > 0.5f)
-        {
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.parent.GetChild(1).localPosition.y, 0);
-        }
-        else
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.parent.GetChild(0).localPosition.y, 0);
+        if (possiblePositions == null)
+            Start();
+        int rand = Random.Range(0,possiblePositions.Length);
+        transform.localPosition = possiblePositions[rand];
+
     }
 
 }

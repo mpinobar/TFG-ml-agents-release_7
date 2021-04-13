@@ -153,7 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRange: 1
-  variableHeight: 1
+  variablePosition: 1
+  agent: {fileID: 0}
   rewardTrigger: {fileID: 0}
 --- !u!1 &7693907131781309239
 GameObject:

@@ -43,7 +43,9 @@ public class AgentControlsParent : Agent
 
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.contacts[0].point.y < transform.position.y)
+        Debug.DrawRay(transform.position, Vector2.down*.5f, Color.green,1);
+        RaycastHit2D ray = Physics2D.Raycast(transform.position,Vector2.down,1.5f);
+        if(ray.transform)
             isJumpReady = true;
     }
     public override void Initialize()
@@ -89,6 +91,7 @@ public class AgentControlsParent : Agent
         OnReset?.Invoke();
         maxDistance = Vector2.Distance(initialPosition.position, endReward.transform.position);
         canGetReward = true;
+        isJumpReady = true;
         //Debug.Log(GetCumulativeReward());
         if (!initialPosition)
             initialPosition = FindObjectOfType<InitialPosition>().transform;
