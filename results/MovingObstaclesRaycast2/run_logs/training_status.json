@@ -2,17 +2,41 @@
     "MovingObstaclesRaycast": {
         "checkpoints": [
             {
-                "steps": 640,
-                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-640.nn",
+                "steps": 2499937,
+                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-2499937.nn",
+                "reward": -0.10000000149011612,
+                "creation_time": 1620296446.4109104
+            },
+            {
+                "steps": 2999999,
+                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-2999999.nn",
+                "reward": -0.07368421162429609,
+                "creation_time": 1620297336.7448337
+            },
+            {
+                "steps": 3499985,
+                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-3499985.nn",
+                "reward": 0.8000000044703484,
+                "creation_time": 1620298226.7472284
+            },
+            {
+                "steps": 3999981,
+                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-3999981.nn",
+                "reward": -8.765388937557445e-10,
+                "creation_time": 1620299129.5736673
+            },
+            {
+                "steps": 4480142,
+                "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast\\MovingObstaclesRaycast-4480142.nn",
                 "reward": null,
-                "creation_time": 1620291909.589272
+                "creation_time": 1620300047.2625291
             }
         ],
         "final_checkpoint": {
-            "steps": 640,
+            "steps": 4480142,
             "file_path": "results\\MovingObstaclesRaycast2\\MovingObstaclesRaycast.nn",
             "reward": null,
-            "creation_time": 1620291909.589272
+            "creation_time": 1620300047.2625291
         }
     },
     "metadata": {

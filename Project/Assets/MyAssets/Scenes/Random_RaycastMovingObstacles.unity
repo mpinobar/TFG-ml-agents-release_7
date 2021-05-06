@@ -335,8 +335,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5705757116297242980, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
+      propertyPath: debugRays
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705757116297242980, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
       propertyPath: numberOfRays
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705757116297242980, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: usesDownRays
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5705757116297242980, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
@@ -358,10 +368,20 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826701762799, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
