@@ -17,15 +17,15 @@ public class AgentControlsParent : Agent
 
     public Action OnReset;
     // Update is called once per frame
-    public virtual void Update()
-    {
+    //public virtual void Update()
+    //{
 
-        if (!isJumpReady && m_rgb.velocity.y < 0)
-        {
-            m_rgb.gravityScale = initialGravity * 2;
-        }
-        //Move(1);
-    }
+    //    //if (!isJumpReady && m_rgb.velocity.y < 0)
+    //    //{
+    //    //    m_rgb.gravityScale = initialGravity * 2;
+    //    //}
+    //    //Move(1);
+    //}
 
     public virtual void Move(float input)
     {
@@ -43,7 +43,7 @@ public class AgentControlsParent : Agent
 
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.DrawRay(transform.position, Vector2.down*.5f, Color.green,1);
+        //Debug.DrawRay(transform.position, Vector2.down*.5f, Color.green,1);
         RaycastHit2D ray = Physics2D.Raycast(transform.position,Vector2.down,1.5f);
         if(ray.transform)
             isJumpReady = true;

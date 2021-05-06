@@ -6,9 +6,9 @@ public class PositionRandomizer : MonoBehaviour
 
     [SerializeField] bool variablePosition;
     Vector3 [] possiblePositions;
-    Vector3 upPosition;
-    Vector3 downPosition;
-    Vector3 initalPos;
+    public Vector3 upPosition;
+    public Vector3 downPosition;
+    public Vector3 initalPos;
 
     [SerializeField] AgentControlsParent agent;
     [SerializeField] RewardTrigger rewardTrigger;
@@ -24,7 +24,12 @@ public class PositionRandomizer : MonoBehaviour
         if (agent)
             agent.OnReset -= Reposition;
     }
-    private void Start()
+    private void Awake()
+    {
+        Initialize();
+    }
+
+    private void Initialize()
     {
         List<Vector3> positionsList = new List<Vector3>();
         for (int i = 0; i < transform.parent.childCount - 1; i++)
@@ -32,7 +37,12 @@ public class PositionRandomizer : MonoBehaviour
             positionsList.Add(transform.parent.GetChild(i).localPosition);
         }
         possiblePositions = positionsList.ToArray();
+
+        upPosition = possiblePositions[1];
+        downPosition = possiblePositions[0];
+
         initalPos = transform.localPosition;
+        RandomizePosition();
     }
 
     public void Reposition()
@@ -47,7 +57,7 @@ public class PositionRandomizer : MonoBehaviour
     private void RandomizePosition()
     {
         if (possiblePositions == null)
-            Start();
+            Initialize();
         int rand = Random.Range(0,possiblePositions.Length);
         transform.localPosition = possiblePositions[rand];
 

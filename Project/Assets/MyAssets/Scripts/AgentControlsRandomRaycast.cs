@@ -9,7 +9,10 @@ public class AgentControlsRandomRaycast : AgentControlsParent
 
     float previousDistance;
     float initialDistance;
-
+    [SerializeField] int numberOfRays = 2;
+    [SerializeField] float maxAngle = 60;
+    [SerializeField] float horizontalOffset = 0.4f;
+    [SerializeField] bool debugRays;
     public override void Initialize()
     {
         base.Initialize();
@@ -27,8 +30,19 @@ public class AgentControlsRandomRaycast : AgentControlsParent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(isJumpReady);
-        sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right).distance);
-        sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right + Vector2.up).distance);
+
+        float angleDelta = maxAngle/numberOfRays;
+        float currentAngle = 0;
+        for (int i = 0; i < numberOfRays; i++)
+        {
+            //Debug.LogError("Current angle: " + currentAngle + " with tangent " + Mathf.Tan(Mathf.Deg2Rad * currentAngle));
+            if (debugRays)
+                Debug.DrawRay(transform.position + Vector3.right * horizontalOffset, Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle), Color.green);
+            sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right * horizontalOffset, Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).distance);
+            currentAngle += angleDelta;
+        }
+        //sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right).distance);
+        //sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right + Vector2.up).distance);
     }
     public override void OnActionReceived(float[] vectorAction)
     {

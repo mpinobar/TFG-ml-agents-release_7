@@ -2,29 +2,41 @@
     "RaycastRandomChoice": {
         "checkpoints": [
             {
-                "steps": 499988,
-                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-499988.nn",
+                "steps": 499978,
+                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-499978.nn",
                 "reward": null,
-                "creation_time": 1618303883.7392075
+                "creation_time": 1618569784.3687422
             },
             {
-                "steps": 999976,
-                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-999976.nn",
+                "steps": 999960,
+                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-999960.nn",
                 "reward": null,
-                "creation_time": 1618304637.8621674
+                "creation_time": 1618570527.9746132
             },
             {
-                "steps": 1323114,
-                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-1323114.nn",
+                "steps": 1499993,
+                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-1499993.nn",
                 "reward": null,
-                "creation_time": 1618305133.9136922
+                "creation_time": 1618571270.029831
+            },
+            {
+                "steps": 1999967,
+                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-1999967.nn",
+                "reward": null,
+                "creation_time": 1618572011.7671206
+            },
+            {
+                "steps": 2161331,
+                "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice\\RaycastRandomChoice-2161331.nn",
+                "reward": null,
+                "creation_time": 1618572255.4288306
             }
         ],
         "final_checkpoint": {
-            "steps": 1323114,
+            "steps": 2161331,
             "file_path": "results\\RaycastRandomChoice\\RaycastRandomChoice.nn",
             "reward": null,
-            "creation_time": 1618305133.9136922
+            "creation_time": 1618572255.4288306
         }
     },
     "metadata": {

@@ -14,7 +14,7 @@ public class AgentControlsRandomChoiceRaycast : AgentControlsParent
     public override void Initialize()
     {
         base.Initialize();
-        previousDistance = Vector2.Distance(endReward.transform.position,transform.position);
+        previousDistance = Mathf.Abs(endReward.transform.position.x - transform.position.x);
         initialDistance = previousDistance;
     }
 
@@ -35,25 +35,31 @@ public class AgentControlsRandomChoiceRaycast : AgentControlsParent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(isJumpReady);
-        sensor.AddObservation(endReward.transform.position.x - transform.position.x);
-        sensor.AddObservation(endReward.transform.position.y - transform.position.y);
-        sensor.AddObservation(previousDistance);
+        if (endReward.transform.position.x - transform.position.x < 0)
+        {
+
+            sensor.AddObservation(-1);
+        }
+        else
+            sensor.AddObservation(1);
+        //sensor.AddObservation(endReward.transform.position.y - transform.position.y);
+        //sensor.AddObservation(previousDistance);
 
         sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right).distance);
         sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right + Vector2.up).distance);
-        sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right - Vector2.up).distance);
+        //sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right - Vector2.up).distance);
 
         sensor.AddObservation(Physics2D.Raycast(transform.position - Vector3.right, -Vector2.right).distance);
         sensor.AddObservation(Physics2D.Raycast(transform.position - Vector3.right, -Vector2.right + Vector2.up).distance);
-        sensor.AddObservation(Physics2D.Raycast(transform.position - Vector3.right, -Vector2.right - Vector2.up).distance);
+        //sensor.AddObservation(Physics2D.Raycast(transform.position - Vector3.right, -Vector2.right - Vector2.up).distance);
     }
     public override void OnActionReceived(float[] vectorAction)
     {
-        if(vectorAction[1] == 1)
+        if (vectorAction[1] == 1)
         {
             Move(1);
         }
-        else if(vectorAction[1] == 2)
+        else if (vectorAction[1] == 2)
         {
             Move(-1);
         }
@@ -69,7 +75,7 @@ public class AgentControlsRandomChoiceRaycast : AgentControlsParent
         if (currentDistance < previousDistance)
         {
             previousDistance = currentDistance;
-            AddReward(currentDistance / (initialDistance * Time.timeScale));
+            AddReward(2 * currentDistance / (initialDistance * Time.timeScale));
         }
     }
 
