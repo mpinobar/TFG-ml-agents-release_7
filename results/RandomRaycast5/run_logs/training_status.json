@@ -1,0 +1,35 @@
+{
+    "RaycastRandom": {
+        "checkpoints": [
+            {
+                "steps": 499989,
+                "file_path": "results\\RandomRaycast5\\RaycastRandom\\RaycastRandom-499989.nn",
+                "reward": null,
+                "creation_time": 1622062638.1173773
+            },
+            {
+                "steps": 999969,
+                "file_path": "results\\RandomRaycast5\\RaycastRandom\\RaycastRandom-999969.nn",
+                "reward": 1.171509672488485,
+                "creation_time": 1622063488.4743843
+            },
+            {
+                "steps": 1108409,
+                "file_path": "results\\RandomRaycast5\\RaycastRandom\\RaycastRandom-1108409.nn",
+                "reward": 1.3500000052154064,
+                "creation_time": 1622063674.8563256
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1108409,
+            "file_path": "results\\RandomRaycast5\\RaycastRandom.nn",
+            "reward": 1.3500000052154064,
+            "creation_time": 1622063674.8563256
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}
