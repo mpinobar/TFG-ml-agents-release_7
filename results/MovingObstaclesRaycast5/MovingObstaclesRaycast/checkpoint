@@ -1,0 +1,6 @@
+model_checkpoint_path: "MovingObstaclesRaycast-2015222.ckpt"
+all_model_checkpoint_paths: "MovingObstaclesRaycast-499981.ckpt"
+all_model_checkpoint_paths: "MovingObstaclesRaycast-999993.ckpt"
+all_model_checkpoint_paths: "MovingObstaclesRaycast-1499964.ckpt"
+all_model_checkpoint_paths: "MovingObstaclesRaycast-1999936.ckpt"
+all_model_checkpoint_paths: "MovingObstaclesRaycast-2015222.ckpt"

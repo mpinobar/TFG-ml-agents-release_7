@@ -1,0 +1,35 @@
+{
+    "MovingObstaclesRaycast": {
+        "checkpoints": [
+            {
+                "steps": 499942,
+                "file_path": "results\\MovingObstaclesRaycast7\\MovingObstaclesRaycast\\MovingObstaclesRaycast-499942.nn",
+                "reward": -0.028571428997176036,
+                "creation_time": 1621847233.0313296
+            },
+            {
+                "steps": 999981,
+                "file_path": "results\\MovingObstaclesRaycast7\\MovingObstaclesRaycast\\MovingObstaclesRaycast-999981.nn",
+                "reward": -0.20000000298023224,
+                "creation_time": 1621847998.075964
+            },
+            {
+                "steps": 1397378,
+                "file_path": "results\\MovingObstaclesRaycast7\\MovingObstaclesRaycast\\MovingObstaclesRaycast-1397378.nn",
+                "reward": null,
+                "creation_time": 1621848585.3402379
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1397378,
+            "file_path": "results\\MovingObstaclesRaycast7\\MovingObstaclesRaycast.nn",
+            "reward": null,
+            "creation_time": 1621848585.3402379
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.20.0",
+        "tensorflow_version": "2.2.0-rc1"
+    }
+}

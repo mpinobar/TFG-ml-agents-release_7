@@ -13,7 +13,9 @@ public class AgentControlsRandomRaycast : AgentControlsParent
     [SerializeField] float maxAngle = 60;
     [SerializeField] float horizontalOffset = 0.4f;
     [SerializeField] bool debugRays;
+    [SerializeField] float distanceDraw = 10;
     [SerializeField] bool usesDownRays;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -28,6 +30,24 @@ public class AgentControlsRandomRaycast : AgentControlsParent
         if (Input.GetKey(KeyCode.Space))
             actionsOut[0] = 1;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        float angleDelta = maxAngle/numberOfRays;
+        float currentAngle = 0;
+
+        for (int i = 0; i < numberOfRays; i++)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position + Vector3.right * horizontalOffset, (Vector2)transform.position + (Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).normalized * distanceDraw);
+            if (usesDownRays)
+            {
+                Gizmos.DrawLine(transform.position + Vector3.right * horizontalOffset, (Vector2)transform.position + (Vector2.right - Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).normalized * distanceDraw);
+            }
+            currentAngle += angleDelta;
+        }
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(isJumpReady);
@@ -36,21 +56,18 @@ public class AgentControlsRandomRaycast : AgentControlsParent
         float currentAngle = 0;
         for (int i = 0; i < numberOfRays; i++)
         {
-            //Debug.LogError("Current angle: " + currentAngle + " with tangent " + Mathf.Tan(Mathf.Deg2Rad * currentAngle));
-            if (debugRays)
-                    Debug.DrawRay(transform.position + Vector3.right * horizontalOffset, Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle), Color.green);
-                sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right * horizontalOffset, Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).distance);
+            sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right * horizontalOffset,
+                Vector2.right + Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).distance);
             if (usesDownRays)
             {
-                if (debugRays)
-                    Debug.DrawRay(transform.position + Vector3.right * horizontalOffset, Vector2.right - Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle), Color.green);
-                sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right * horizontalOffset, Vector2.right - Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).distance);
+                sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right * horizontalOffset,
+                    Vector2.right - Vector2.up * Mathf.Tan(Mathf.Deg2Rad * currentAngle)).distance);
             }
             currentAngle += angleDelta;
         }
-        //sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right).distance);
-        //sensor.AddObservation(Physics2D.Raycast(transform.position + Vector3.right, Vector2.right + Vector2.up).distance);
     }
+
+
     public override void OnActionReceived(float[] vectorAction)
     {
         Move(vectorAction[1]);

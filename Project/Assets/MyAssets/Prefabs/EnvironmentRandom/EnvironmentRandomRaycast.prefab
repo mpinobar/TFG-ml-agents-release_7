@@ -666,6 +666,11 @@ MonoBehaviour:
   canGetReward: 0
   maxDistance: 0
   rewardAdvancement: 0
+  numberOfRays: 2
+  maxAngle: 60
+  horizontalOffset: 0.4
+  debugRays: 0
+  usesDownRays: 0
 --- !u!1 &2308199125086183822
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934444456826063638, guid: ad0654ea8f17d5a4f9fae6d7c4cb4c24,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3934444456826063640, guid: ad0654ea8f17d5a4f9fae6d7c4cb4c24,
         type: 3}
