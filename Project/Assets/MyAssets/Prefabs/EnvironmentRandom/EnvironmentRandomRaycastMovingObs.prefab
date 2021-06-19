@@ -405,7 +405,7 @@ MonoBehaviour:
   canGetReward: 0
   maxDistance: 0
   rewardAdvancement: 0
-  numberOfRays: 8
+  numberOfRays: 5
   maxAngle: 80
   horizontalOffset: 0.4
   debugRays: 0
@@ -1815,7 +1815,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: f559acb83f0804c43b037619432a116c,
+      objectReference: {fileID: 5022602860645237092, guid: 728eed32878431c46b3ca330dd4a1489,
         type: 3}
     - target: {fileID: 3934444456826063640, guid: ad0654ea8f17d5a4f9fae6d7c4cb4c24,
         type: 3}
@@ -1840,7 +1840,7 @@ PrefabInstance:
     - target: {fileID: 3934444456826063640, guid: ad0654ea8f17d5a4f9fae6d7c4cb4c24,
         type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3934444456826063640, guid: ad0654ea8f17d5a4f9fae6d7c4cb4c24,
         type: 3}

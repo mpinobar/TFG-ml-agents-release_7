@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_RootOrder
@@ -203,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
@@ -273,6 +283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_RootOrder
@@ -341,6 +356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
@@ -411,6 +431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_RootOrder
@@ -479,6 +504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
@@ -549,6 +579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_RootOrder
@@ -618,6 +653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
       propertyPath: m_RootOrder
@@ -686,6 +726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvironmentRandomRaycastMovingObs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943079, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
@@ -760,17 +805,6 @@ PrefabInstance:
         type: 3}
       propertyPath: usesDownRays
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8138596826701762799, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
-        type: 3}
-      propertyPath: m_Model
-      value: 
-      objectReference: {fileID: 5022602860645237092, guid: 728eed32878431c46b3ca330dd4a1489,
-        type: 3}
-    - target: {fileID: 8138596826701762799, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
-        type: 3}
-      propertyPath: m_BrainParameters.VectorObservationSize
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8138596826973943078, guid: 6094a4e38d0f5a749b7c99e69a7c023e,
         type: 3}
